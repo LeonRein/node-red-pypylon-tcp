@@ -1,0 +1,49 @@
+[
+    {
+        "id": "a806773f009159ed",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f6743c2507803f68",
+        "type": "image",
+        "z": "a806773f009159ed",
+        "name": "",
+        "width": "480",
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "48ecf33ec84c32fc",
+        "type": "tcp in",
+        "z": "a806773f009159ed",
+        "name": "",
+        "server": "client",
+        "host": "python",
+        "port": "64746",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "f6743c2507803f68"
+            ]
+        ]
+    }
+]

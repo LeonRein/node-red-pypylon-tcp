@@ -1,0 +1,33 @@
+################################################################################
+# Node-RED Stack or Compose
+################################################################################
+# docker stack deploy node-red --compose-file docker-compose-node-red.yml
+# docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
+################################################################################
+version: "3.7"
+
+services:
+  node-red:
+    build: ./node-red-docker
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - "1880:1880"
+    networks:
+      node-red-net:
+        aliases:
+          - node-red
+    volumes:
+      - ./node-red-data:/data
+
+  python:
+    build: ./pypylon-docker
+    environment:
+      - TZ=Europe/Berlin
+    networks:
+      node-red-net:
+        aliases:
+          - python
+
+networks:
+  node-red-net:
