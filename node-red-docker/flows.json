@@ -20,7 +20,7 @@
         "pass": false,
         "outputs": 0,
         "x": 520,
-        "y": 200,
+        "y": 240,
         "wires": []
     },
     {
@@ -38,12 +38,51 @@
         "trim": false,
         "base64": false,
         "tls": "",
-        "x": 300,
+        "x": 120,
         "y": 200,
         "wires": [
+            [
+                "ac83d77da3eeb0c6"
+            ]
+        ]
+    },
+    {
+        "id": "ac83d77da3eeb0c6",
+        "type": "msg-speed",
+        "z": "a806773f009159ed",
+        "name": "",
+        "frequency": "sec",
+        "interval": 1,
+        "estimation": false,
+        "ignore": true,
+        "pauseAtStartup": false,
+        "topicDependent": false,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "25a34932cb2c3bd7"
+            ],
             [
                 "f6743c2507803f68"
             ]
         ]
+    },
+    {
+        "id": "25a34932cb2c3bd7",
+        "type": "debug",
+        "z": "a806773f009159ed",
+        "name": "msg speed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 160,
+        "wires": []
     }
 ]
