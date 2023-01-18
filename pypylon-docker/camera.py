@@ -16,6 +16,7 @@ cam.ImageFilename = "horse.png"
 cam.ImageFileMode = "On" # enable image file test pattern
 cam.TestImageSelector = "Off" # disable testpattern [ image file is "real-image"]
 cam.PixelFormat = "RGB8Packed"
+cam.AcquisitionFrameRateAbs = 60
 cam.StartGrabbing()
 
 # init socket
